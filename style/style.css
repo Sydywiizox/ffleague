@@ -174,7 +174,7 @@ a {
 
 .header-nav-link {
   color: var(--pink);
-  font-family: Economica, "Source Sans Pro", sans-serif;
+  font-family: "Economica", "Source Sans Pro", sans-serif;
   font-size: 23px;
   line-height: 1.3em;
   position: relative;
@@ -307,7 +307,7 @@ a {
   justify-content: space-around;
 }
 
-.content h2 {
+h2 {
   font-size: 42px;
 }
 
@@ -319,6 +319,31 @@ a {
   width: 50%;
   height: 80vh;
 }
+
+.content *:not(h2),.content-rl *:not(h2) {
+  font-family: "Economica", "Source Sans Pro", sans-serif;
+}
+
+.content-rl li{
+  margin-left: 20px;
+  position: relative;
+}
+
+.content-rl p, .content-rl ul {
+  margin-bottom: 30px;
+}
+
+.content-rl li::before{
+  content: "";
+  position: absolute;
+  height: 5px;
+  aspect-ratio: 1;
+  left: -10px;
+  bottom: 40%;
+  background-color: var(--pink);
+  border-radius: 20px;
+}
+
 .twitter-timeline {
   width: 100%;
 }
@@ -332,6 +357,11 @@ a {
 
 .content-logo {
   width: 250px;
+}
+
+.content-rl {
+  color: var(--pink);
+  padding: 10vh 10vw;
 }
 
 .footer-nav a:first-child,
@@ -362,7 +392,7 @@ a {
 
 .footer-nav-link {
   color: var(--pink);
-  font-family: Economica, "Source Sans Pro", sans-serif;
+  font-family: "Economica", "Source Sans Pro", sans-serif;
   font-size: 23px;
   line-height: 1.3em;
   position: relative;
