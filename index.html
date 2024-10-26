@@ -94,66 +94,62 @@
             parent: ["localhost", "127.0.0.1"], // Adjust as necessary
           });
 
-          document.getElementById('mode-toggle').addEventListener('change', function() {
-            const playerDiv = document.getElementById('player');
-            const chatDiv = document.getElementById('chat');
-            if (this.checked) {
-                chatDiv.style.display = 'flex'; // Afficher le chat
-                playerDiv.style.display = 'none'; // Cacher le player
-            } else {
-                chatDiv.style.display = 'none'; // Cacher le chat
-                playerDiv.style.display = 'flex'; // Afficher le player
-            }
-        });
+          document
+            .getElementById("mode-toggle")
+            .addEventListener("change", function () {
+              const playerDiv = document.getElementById("player");
+              const chatDiv = document.getElementById("chat");
+              if (this.checked) {
+                chatDiv.style.display = "flex"; // Afficher le chat
+                playerDiv.style.display = "none"; // Cacher le player
+              } else {
+                chatDiv.style.display = "none"; // Cacher le chat
+                playerDiv.style.display = "flex"; // Afficher le player
+              }
+            });
         </script>
       </div>
 
       <div class="content">
-        <img
-          src="img/logo_ffleague_white_no_bg.png"
-          alt=""
-          class="content-logo"
-        />
-        <h2>Notre projet</h2>
-        <p>
-          La FFLeague est née, comme tous les grands projets.. Lors d'une
-          discussion entre amis à 3h du matin. Nous souhaitons mettre en œuvre
-          tout ce que nous pouvons afin de permettre à tout le monde de goûter à
-          l'ambiance, à la hype et au tryhard lié à l'E-Sport. Après avoir
-          commencé par une ligue tous les dimanches sur League Of Legends, la
-          FFLeague s'étend, notamment par le biais de showmatchs et de tournois,
-          sur Rocket League pour le moment. N'hésitez pas à nous contacter si
-          vous souhaitez avoir plus d'informations et même participer !
-        </p>
-      </div>
-    </main>
-    <footer>
-      <div class="footer-top">
-        <div class="footer-top-content">
-          <nav class="footer-nav">
-            <a href="#"
-              ><img
-                src="img/logo_ffleague_white_no_bg.png"
-                alt=""
-                class="footer-logo first"
-            /></a>
-            <a href="#" class="header-nav-link active">Accueil</a
-            ><a href="#" class="header-nav-link">League Of Legends</a
-            ><a href="#" class="header-nav-link">Rocket League</a
-            ><a href="#" class="header-nav-link">Planning</a
-            ><a href="#" class="header-nav-link">FAQ</a
-            ><a href="#" class="header-nav-link">Contact</a>
-            <a href="#"
-              ><img
-                src="img/logo_ffleague_white_no_bg.png"
-                alt=""
-                class="footer-logo last"
-            /></a>
-          </nav>
+        <div class="content-text">
+          <img
+            src="img/logo_ffleague_white_no_bg.png"
+            alt=""
+            class="content-logo"
+          />
+          <h2>Notre projet</h2>
+          <p>
+            La FFLeague est née, comme tous les grands projets.. Lors d'une
+            discussion entre amis à 3h du matin. Nous souhaitons mettre en œuvre
+            tout ce que nous pouvons afin de permettre à tout le monde de goûter
+            à l'ambiance, à la hype et au tryhard lié à l'E-Sport. Après avoir
+            commencé par une ligue tous les dimanches sur League Of Legends, la
+            FFLeague s'étend, notamment par le biais de showmatchs et de
+            tournois, sur Rocket League pour le moment. N'hésitez pas à nous
+            contacter si vous souhaitez avoir plus d'informations et même
+            participer !
+          </p>
+        </div>
+        <div class="content-twitter">
+          <a
+            class="twitter-timeline"
+            href="https://twitter.com/OTP_LoL?ref_src=twsrc%5Etfw"
+            >Tweets by OTP_LoL</a
+          >
+          <script
+            async
+            src="https://platform.twitter.com/widgets.js"
+            charset="utf-8"
+          ></script>
         </div>
       </div>
-      <div class="footer-bot">
-        <div class="footer-bot-content">
+      <button id="backToTop" title="Retour en haut">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footer-content">
           <div class="socials">
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-youtube"></i></a>

@@ -31,3 +31,19 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Élément .toggle__input introuvable");
   }
 });
+
+window.onscroll = function() {
+    const button = document.getElementById('backToTop');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        button.style.display = "flex"; // Afficher le bouton
+    } else {
+        button.style.display = "none"; // Masquer le bouton
+    }
+};
+
+document.getElementById('backToTop').onclick = function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Défilement doux
+    });
+};

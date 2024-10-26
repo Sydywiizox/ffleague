@@ -227,10 +227,33 @@ a {
   flex-direction: column;
 }
 
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  display: none; /* Masqué par défaut */
+  background-color: #000;
+  color: var(--pink);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 25px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+#backToTop:hover {
+  background-color: var(--pink);
+  box-shadow: 3px 3px 3px #000;
+  color: #fff;
+}
+
 /****************************************/
 .toggle-chat {
   display: flex;
-  width: 120px;
+  width: 130px;
   justify-content: space-between;
   color: #fff;
   margin: 10px;
@@ -275,26 +298,40 @@ a {
 /****************************************/
 
 .content {
-  width: 50%;
+  width: 80%;
   margin: auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
   color: var(--pink);
   padding: 0 50px 50px 50px;
+  justify-content: space-around;
 }
 
 .content h2 {
   font-size: 42px;
 }
 
-.footer-top {
-  height: 50px;
-  background-color: black;
+.content-text {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  position: relative;
+  align-items: center;
+  width: 50%;
+  height: 80vh;
+}
+.twitter-timeline {
+  width: 100%;
+}
+.content-twitter {
+  display: flex;
+  width: 30%;
+  height: 60vh;
+  overflow-y: scroll;
+  border-radius: 25px;
+}
+
+.content-logo {
+  width: 250px;
 }
 
 .footer-nav a:first-child,
@@ -314,13 +351,6 @@ a {
 
 .footer-logo.last:hover {
   filter: drop-shadow(16px 6px 3px var(--pink));
-}
-
-.footer-top-content {
-  width: var(--footer-width-base);
-  height: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .footer-nav {
@@ -362,14 +392,14 @@ a {
   bottom: 0;
 }
 
-.footer-bot {
+.footer {
   height: 50px;
   background-color: var(--pink);
   display: flex;
   justify-content: center;
 }
 
-.footer-bot-content {
+.footer-content {
   display: flex;
   align-items: center;
 }
@@ -382,13 +412,13 @@ a {
   padding-bottom: 10px;
 }
 
-.footer-bot-content .socials {
+.footer-content .socials {
   height: 100%;
   display: flex;
   align-items: center;
 }
 
-.footer-bot-content .socials i {
+.footer-content .socials i {
   font-size: 30px;
   padding: 5px;
 }
