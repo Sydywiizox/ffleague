@@ -211,6 +211,7 @@ a {
   justify-content: center;
   align-items: center;
 }
+
 #chat {
   display: none; /* Start hidden */
   height: 30vw;
