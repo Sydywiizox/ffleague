@@ -105,6 +105,12 @@ a {
     transform: translate(-3.5px,-3.5px);
 }
 
+.header-nav-link:hover, .footer-nav-link:hover {
+    filter: drop-shadow(4px 4px 1px #888);
+    transition: filter 0.5s, transform 0.5s;
+    transform: translate(-2px,-2px);
+}
+
 .header-top {
   height: 63px;
   background-color: var(--pink);
@@ -198,18 +204,14 @@ a {
   bottom: 0;
 }
 
-.twitch {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
+
 
 #twitch-embed {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  aspect-ratio: 21/9;
+  aspect-ratio: 16/9;
 }
 
 .content {

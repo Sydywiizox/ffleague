@@ -58,23 +58,23 @@
       </div>
     </header>
     <main>
-      <div class="twitch">
-        <div id="twitch-embed"></div>
+      <div id="twitch-embed"></div>
 
-        <!-- Load the Twitch embed JavaScript file -->
-        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+      <!-- Load the Twitch embed JavaScript file -->
+      <script src="https://embed.twitch.tv/embed/v1.js"></script>
 
-        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-        <script type="text/javascript">
-          new Twitch.Embed("twitch-embed", {
-            width: "80%",
-            height: "80%",
-            channel: "otplol_",
-            // Only needed if this page is going to be embedded on other websites
-            parent: ["embed.example.com", "othersite.example.com"],
-          });
-        </script>
-      </div>
+      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+      <script type="text/javascript">
+        new Twitch.Embed("twitch-embed", {
+          width: "80%",
+          height: "80%",
+          channel: "otplol_",
+          layout: "video",
+          // Only needed if this page is going to be embedded on other websites
+          parent: ["embed.example.com", "othersite.example.com"],
+        });
+      </script>
+
       <div class="content">
         <img
           src="img/logo_ffleague_white_no_bg.png"
