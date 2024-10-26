@@ -21,6 +21,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="style/style.css" />
+    <script src="script/app.js" defer></script>
   </head>
   <body>
     <header>
@@ -58,22 +59,54 @@
       </div>
     </header>
     <main>
-      <div id="twitch-embed"></div>
+      <div class="twitch-content">
+        <div class="toggle-chat">
+          <label>Chat :</label>
+          <div class="toggle">
+            <input type="checkbox" id="mode-toggle" class="toggle__input" />
+            <label for="mode-toggle" class="toggle__label"></label>
+          </div>
+        </div>
 
-      <!-- Load the Twitch embed JavaScript file -->
-      <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <div id="player"></div>
 
-      <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-      <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-          width: "80%",
-          height: "80%",
-          channel: "otplol_",
-          layout: "video",
-          // Only needed if this page is going to be embedded on other websites
-          parent: ["embed.example.com", "othersite.example.com"],
+        <div id="chat"></div>
+
+        <script src="https://embed.twitch.tv/embed/v1.js"></script>
+        <script>
+          // Embed Twitch Player
+          const player = new Twitch.Embed("player", {
+            channel: "otplol_", // Replace with your Twitch channel name
+            width: "100%",
+            height: "100%",
+            layout: "video",
+            theme: "dark", // Optional: change the theme
+            parent: ["localhost", "127.0.0.1"], // Adjust as necessary
+          });
+
+          // Embed Twitch Chat
+          const chat = new Twitch.Embed("chat", {
+            channel: "otplol_", // Replace with your Twitch channel name
+            width: "100%",
+            height: "100%",
+            layout: "chat",
+            theme: "dark", // Optional: change the theme
+            parent: ["localhost", "127.0.0.1"], // Adjust as necessary
+          });
+
+          document.getElementById('mode-toggle').addEventListener('change', function() {
+            const playerDiv = document.getElementById('player');
+            const chatDiv = document.getElementById('chat');
+            if (this.checked) {
+                chatDiv.style.display = 'flex'; // Afficher le chat
+                playerDiv.style.display = 'none'; // Cacher le player
+            } else {
+                chatDiv.style.display = 'none'; // Cacher le chat
+                playerDiv.style.display = 'flex'; // Afficher le player
+            }
         });
-      </script>
+        </script>
+      </div>
 
       <div class="content">
         <img
