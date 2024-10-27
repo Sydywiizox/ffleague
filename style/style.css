@@ -204,20 +204,21 @@ a {
   bottom: 0;
 }
 
-#player {
-  display: none; /* Hide the player initially */
-  height: 30vw;
-  aspect-ratio: 16/9;
-  justify-content: center;
-  align-items: center;
+#twitch-embed {
+  overflow: hidden;
 }
 
-#chat {
-  display: none; /* Start hidden */
-  height: 30vw;
+#twitch-embed iframe {
+  display: block;
   width: calc(53.33vw + 340px);
+  height: 30vw;
+  overflow: hidden;
   justify-content: center;
-  align-items: center;
+}
+
+.twitch-container {
+  display: flex;
+  justify-content: center;
 }
 
 .twitch-content {
@@ -311,13 +312,17 @@ h2 {
   font-size: 42px;
 }
 
+.content {
+  height: 80vh;
+}
+
 .content-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 50%;
-  height: 80vh;
+  height: 100%;
 }
 
 .content *:not(h2),.content-rl *:not(h2) {
