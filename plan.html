@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ffleague.fr - Accueil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3a1761a339.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="script/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let calendarEl = document.getElementById("calendar");
+        let calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          eventColor: "#f39b9b",
+          locale: "fr",
+          firstDay: 1,
+          headerToolbar: {
+            left: "prev,next today",
+            center: "title",
+            right: "dayGridMonth,timeGridWeek,timeGridDay",
+          },
+          buttonText: {
+            today: "Aujourd'hui",
+            month: "Mois",
+            week: "Semaine",
+            day: "Jour",
+          },
+          events: [
+            {
+              title: "DBA - WQT",
+              start: "2024-10-27T21:00:00", // Date et heure de début
+            },
+            {
+              title: "CSC - LC",
+              start: "2024-10-27T22:00:00", // Date et heure de début
+            },
+          ],
+        });
+
+        calendar.render();
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="header-top-content">
+          <h1 class="header-title">
+            Un groupe d'amis, un projet, une passion...
+          </h1>
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
+            <a href="#"><i class="fa-brands fa-twitch"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="header-bot">
+        <div class="header-bot-content">
+          <img
+            src="img/logo_ffleague_white_no_bg.png"
+            alt=""
+            class="header-logo"
+          />
+          <nav class="header-nav">
+            <a href="index.html" class="header-nav-link">Accueil</a
+            ><a href="lol.html" class="header-nav-link">League Of Legends</a
+            ><a href="rl.html" class="header-nav-link">Rocket League</a
+            ><a href="plan.html" class="header-nav-link active">Planning</a
+            ><a href="faq.html" class="header-nav-link">FAQ</a
+            ><a href="contact.html" class="header-nav-link">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="calendar"></div>
+      <button id="backToTop" title="Retour en haut">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footer-content">
+          <div class="socials">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-discord"></i></a>
+            <a href="#"><i class="fa-brands fa-twitch"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

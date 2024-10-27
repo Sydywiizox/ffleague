@@ -82,6 +82,10 @@ body {
   background-color: var(--grey);
 }
 
+main {
+  min-height: 80vh;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -457,3 +461,49 @@ h2 {
   font-size: 30px;
   padding: 5px;
 }
+#calendar {
+  width: 60vw;
+  height: 50vw;
+  margin: 20px auto;
+}
+#calendar .fc-daygrid-event {
+}
+#calendar .fc-daygrid-day {
+  
+}
+#calendar .fc-day {
+  background-color: #fff;
+}
+#calendar .fc-col-header-cell {
+  height: 20px;
+  font-size: 30px;
+}
+#calendar .fc-toolbar {
+}
+#calendar .fc-toolbar-title {
+  font-size: 35px;
+  color: var(--pink);
+  text-align: center;
+}
+#calendar .fc-button {
+  background-color: var(--pink);
+}
+#calendar .fc-button:hover {
+}
+#calendar .fc-button:disabled {
+}
+#calendar .fc-event *{
+  font-size: 12px;
+}
+
+#calendar .fc-event-title {
+  font-size: 10px;
+  white-space: wrap;
+}
+
+#calendar .fc-timegrid-axis {
+  background-color: var(--pink);
+}
+
+
+
