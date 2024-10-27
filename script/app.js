@@ -46,3 +46,4 @@ document.getElementById("backToTop").onclick = function () {
     behavior: "smooth", // Défilement doux
   });
 };
+

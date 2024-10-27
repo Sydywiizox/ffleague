@@ -528,4 +528,5 @@ h2 {
   text-align: center;
   color: var(--pink);
   margin: 5px;
+  display: none;
 }
