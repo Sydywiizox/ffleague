@@ -104,15 +104,16 @@ a {
 }
 
 .socials i:hover {
-    filter: drop-shadow(7px 7px 0px #fff);
-    transition: filter 0.5s, transform 0.5s;
-    transform: translate(-3.5px,-3.5px);
+  filter: drop-shadow(7px 7px 0px #fff);
+  transition: filter 0.5s, transform 0.5s;
+  transform: translate(-3.5px, -3.5px);
 }
 
-.header-nav-link:hover, .footer-nav-link:hover {
-    filter: drop-shadow(4px 4px 1px #888);
-    transition: filter 0.5s, transform 0.5s;
-    transform: translate(-2px,-2px);
+.header-nav-link:hover,
+.footer-nav-link:hover {
+  filter: drop-shadow(4px 4px 1px #888);
+  transition: filter 0.5s, transform 0.5s;
+  transform: translate(-2px, -2px);
 }
 
 .header-top {
@@ -284,13 +285,12 @@ a {
   transition: background-color 0.3s ease;
 }
 
-
 .toggle__input:checked + .toggle__label::after {
   left: 32px;
 }
 
 .toggle__label::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 2px;
   left: 2px;
@@ -329,20 +329,22 @@ h2 {
   height: 100%;
 }
 
-.content *:not(h2),.content-rl *:not(h2) {
+.content *:not(h2),
+.content-rl *:not(h2) {
   font-family: "Economica", "Source Sans Pro", sans-serif;
 }
 
-.content-rl li{
+.content-rl li {
   margin-left: 20px;
   position: relative;
 }
 
-.content-rl p, .content-rl ul {
+.content-rl p,
+.content-rl ul {
   margin-bottom: 30px;
 }
 
-.content-rl li::before{
+.content-rl li::before {
   content: "";
   position: absolute;
   height: 5px;
@@ -463,13 +465,12 @@ h2 {
 }
 #calendar {
   width: 60vw;
-  height: 50vw;
+  height: 40vw;
   margin: 20px auto;
 }
 #calendar .fc-daygrid-event {
 }
 #calendar .fc-daygrid-day {
-  
 }
 #calendar .fc-day {
   background-color: #fff;
@@ -492,12 +493,12 @@ h2 {
 }
 #calendar .fc-button:disabled {
 }
-#calendar .fc-event *{
-  font-size: 12px;
+#calendar .fc-event * {
+  font-size: 14px;
 }
 
 #calendar .fc-event-title {
-  font-size: 10px;
+  font-size: 12px;
   white-space: wrap;
 }
 
@@ -505,5 +506,26 @@ h2 {
   background-color: var(--pink);
 }
 
+#upcoming-events {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
 
+#upcoming-events .event-item{
+  background-color: var(--pink);
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+#upcoming-events .event-title {
+  border-bottom: var(--grey) solid 2px;
+}
+#upcoming-events .event-date {
 
+}
+.upcoming-events-title {
+  text-align: center;
+  color: var(--pink);
+  margin: 5px;
+}
