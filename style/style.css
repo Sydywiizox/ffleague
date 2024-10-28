@@ -91,6 +91,8 @@ a {
   text-decoration: none;
 }
 
+
+
 :root {
   --pink: #f39b9b;
   --grey: #212121;
@@ -103,6 +105,7 @@ a {
 .fa-brands {
   color: var(--grey);
 }
+
 
 .socials i:hover {
   filter: drop-shadow(7px 7px 0px #fff);
@@ -185,6 +188,12 @@ a {
   position: relative;
   padding: 7px 14px;
   height: fit-content;
+}
+
+.disabled {
+  pointer-events: none; /* Désactive les interactions de clic */
+  color: var(--grey); /* Change la couleur pour un effet visuel */
+  cursor: not-allowed; /* Change le curseur en symbole de non-autorisation */
 }
 
 .header-nav-link.active::before {
